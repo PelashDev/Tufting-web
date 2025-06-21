@@ -1,0 +1,205 @@
+
+/* 
+        -----FONTS---
+font-family: "Calistoga", serif;
+ font-family: 'Proza Libre',serif;
+
+ --------COLORS-----
+ yellow #f2fb0a 
+ yello #fcf804
+ white #ffffff
+*/
+
+*{
+   box-sizing: border-box;
+   margin: 0%;
+padding: 0%;
+}
+ .container {
+        background-color: #000000;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+}
+
+         /* -------------NAVBAR-------------*/
+ .navbar{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #0a0900;
+  gap: 20px;
+   
+  
+}
+.nav-item1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:20px;
+}
+.nav-links{
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+        gap: 30px;
+}
+.nav-links li a:hover{
+        color: #F2FB0A;
+}
+.contact-btn{
+        margin-left: 30px;
+}
+a{color: #ffffff;
+  text-decoration: none;
+        
+}
+.nav-item2 {
+  display: flex;
+  gap: 20px;}
+
+.btn-outline:link, .btn-outline:visited{
+        background: transparent;
+        border-radius: 10px;
+        color: #ffffff;
+        border: 1px solid #F2FB0A;
+}
+.btn-outline:hover, .btn-outline:active{
+        
+        background-color: #F2FB0A;
+        color: #000000;
+        transform: scale(1.1);
+        transition:1s ease;
+
+
+}
+          /* -------------HERO-SECTION-------------*/
+ .hero-section{
+   display:grid;
+   grid-template-columns: 1fr 1fr;
+   row-gap: 80px;
+   column-gap: 0px;
+   background: #141313;
+   color: #ffffff;
+   padding:10px;
+   width: auto;
+   justify-content: center;
+   align-items: center;
+   padding-top: 80px;
+}
+  .grid-item1{
+        grid-column: 1;
+        grid-row: 1;
+        /* justify-self: self-start; */
+        align-self: self-start;
+  }
+  .grid-item2{
+        grid-column:2 ;
+        grid-row:1 ;
+        margin-right: 10px;
+        width: auto;
+        height: auto;
+        justify-items: end;
+        align-self: center;
+}
+   .grid-item3{
+       grid-column: 1/ span 2;
+       grid-row:2;
+       justify-self: center;
+       align-self: center;
+}
+         .grid-item3 video {
+                width: 1300px;
+                height: 1000px;
+                border-radius: 40px;
+                display: block;
+        }
+        
+   h1,h2{
+        font-family: "Calistoga", serif;
+        font-size: 40px;
+        font-weight: 32rem;
+}
+.hero-section h1{
+        margin-left: 10px
+}
+
+.grid-item2 p { 
+        font-style:normal ;
+        font-weight: 5px;
+        font-size: none;
+        font-family: 'Proza Libre',serif;
+        letter-spacing:1px;
+        /* margin-bottom: 20px;
+        margin-top: 80px; */
+
+}
+  .btn{ 
+        display:inline-block;
+        font-weight: 400px;
+        font-size: 16px;
+        padding: 11px 22px;
+        border-radius: 8px;
+        margin: 0;
+       
+}
+.btn2{margin-top: 30px;
+        
+}
+.btn-primary:link,.btn-primary:visited{
+        border: 1px solid #F2FB0A;
+        background-color:#F2FB0A;  
+        color: #000000;
+        margin-left: 0%;
+        margin-right: 100px;
+        
+}
+
+.btn-primary:hover, .btn-primary:active{
+                background-color:transparent ;
+                color: #ffffff;
+                transform: scale (1.1) ;
+                transition:1s ease;
+        }
+
+        /* ---------FEATUER--------- */
+        .features{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 50px;
+                max-height: auto;
+                padding: 80px 60px;
+                background-color: #F2FB0A;
+                flex-wrap: nowrap;
+        }
+        .features p{
+                font-style:normal ;
+                font-weight: 5px;
+                font-size: none;
+                font-family: 'Proza Libre',serif;
+                letter-spacing:0;
+                margin-top: 10px;
+
+        }
+        .features h2{
+                /* margin-top: 50px; */
+        }
+        .features-img{
+                max-width: 500px;
+                border-radius: 12px;
+                object-fit: cover;
+                
+
+        }
+
+        /* ---------BENEFIT SECTION--------- */
+        .bene-section{
+                display: grid;
+                grid-template-columns: 1fr 1fr ;
+                grid-template-rows: 1fr 1fr ;
+        }
+        span div simg{
+                width: 10px;
+        }
