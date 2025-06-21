@@ -16,10 +16,11 @@ font-family: "Calistoga", serif;
 padding: 0%;
 }
  .container {
-        background-color: #000000;
+       /* background-color: #000000;
         max-width: 1200px;
         margin: 0 auto;
         width: 90%;
+*/
 }
 
          /* -------------NAVBAR-------------*/
