@@ -3,22 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sin up</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>
+        sign-up
+    </title>
 </head>
 <style>
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+
+  body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(300deg, #00bfff, #7f8105, #0a0a08);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 1% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.conatiner{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    height:auto;
+    border:2px solid rgb(242, 240, 243);
+  height: auto;
+  box-shadow: 0 10 25px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #080707;
+    
+}
+.wrapper-img img{
+        width: 20rem;
+        height:auto ;
+        border-radius: 5px;
+    }
+    h1{
+        font-family: 'Calistoga' ,sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+        color: white;
+        margin-top: 0.625rem;
+        margin-bottom: 0%;
+    }
+    form{
+        text-align: center;
+
+    }
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  padding: 0.75rem 3.125rem 0.75rem 0.875rem;
+  background-color: black;
+  color: #f2fb0a;
+  border-radius: 8px;
+  border: 1px solid #f2fb0a ;
+  outline: none;
+  font-size: 0.9rem;
+  margin-top: 1.563rem;
+  font-family: 'Proza Libre',serif;
+}
+::placeholder
+{
+    color: white;
+}
+
+.checkbox{
+    color: #f5f5f0;
+    font-size: 0.8rem;
+    padding: 1rem;
+    font-family: 'Proza Libre',serif;
+}
+ .checkbox input{
+    cursor: pointer;
+ }
+input[type="checkbox"] {
+  accent-color: #f2fb0a;
+}
+.checkbox a{
+    color: #2130fd;
+}
+
+
+.sign-up a{
+     display:inline-block;
+        font-weight: 31.25rem;
+        font-family: 'Proza Libre',serif;
+        font-size: 1rem;
+        padding: 0.625rem 1.25rem;
+        border-radius: 11px;
+        margin: 0;
+        text-decoration: none;
+        border: 1px solid yellow;
+        text-decoration: none;
+        color: #f5f5f0;
+        margin: 5px;
+}
+.sign-up a:active,.sign-up a:hover{
+    background-color: #f2fb0a;
+   color: #000000; 
+         transform: scale(1.1);
+        transition:1s ease;
+}
 </style>
 <body>
-    <form action="">
-        
-        <h1>Register</h1>
-        <p>Create your new account</p>
-        <input type="name" placeholder="Full Name">
-        <input type="email" placeholder="user@mail.com">
-        <input type="text" placeholder="password">
-        <a href="#">
+    <div class="conatiner">
+<div class="wrapper-img">
+<img src="svg.plsh/IMG-20250623-WA0006.jpg" alt="">
+</div>
+
+    <div>
+         <h1>Create new account</h1>
+    <form action="177/singup" method="POST">
+        <div class="input-box">
+            <input type="text" name="email" placeholder="Your Name" required>
+        </div>
+        <div class="input-box">
+            <input type="email"    name="mail" placeholder="user@mail.com" required>
+        </div>
+        <div class="input-box">
+            <input type="password" name="password" placeholder="Enter Password" required>
+        </div>
+        <div class="checkbox">
+<input type="checkbox" />
+          I agree to the <a href="#"> Platform’s Terms of Service</a> and <a href="#">Privacy Policies
+          </a>
+          </div>s
+        <div class="sign-up">
+        <a type="submit" href="#" >
             Sign Up
          </a>
+         </div>
     </form>
+    </div>
+</div>
 </body>
 </html>
