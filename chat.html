@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>chat</title>
+</head>
+<style>
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(300deg, #4233c5, #daec32, #0a080a);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 1% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.container{
+    border: 2px solid #070707;
+    width: 35%;
+    background-color: black;
+   box-shadow: 1px 0px 9px 1px #070707;
+}
+.container-1{
+    background-color:#f2fb0a;
+     margin-bottom: 90%;
+     width: 100%;
+    padding: 0.625rem;}
+
+.container-2{
+    position: relative;
+    margin: 1rem;
+    text-align: center;
+}
+h1{
+    font-family: 'Calistoga' ,sans-serif;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    margin-left: 0.625rem;
+}
+p{
+    font-family: 'Proza Libre',serif;
+    color: #515248 ;
+    margin-left:0.625rem;
+    font-size: 0.9rem;
+}
+
+input{
+      width: 90%;
+  padding: 0.75rem 3.125rem 0.75rem 0.875rem;
+  background-color: black;
+  color: #f2fb0a;
+  border-radius: 8px;
+  border: 1px solid #f2fb0a ;
+  outline: none;
+  font-size: 0.9rem;
+  margin-top: 1.563rem;
+  font-family: 'Proza Libre',serif;
+}
+div a{
+    font-size: large;
+    font-weight: 1rem;
+    text-decoration: none;
+    color: #f2fb0a;
+    position: absolute;
+    right: 40px;
+    top: 38px;
+    z-index: 1000;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="container-1">
+        <h1>Please enter your message</h1>
+        <p>Agents are online!</p>
+        </div>
+
+<div class="container-2">
+    <input type="text" placeholder="Type here">
+    <a href="#"><i class="ri-send-plane-2-fill"></i></a>
+    
+</div>
+    </div>
+</body>
+</html>
