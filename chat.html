@@ -20,7 +20,7 @@
 </head>
 <style>
 *{
-    padding: 0%;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
@@ -30,72 +30,125 @@ body{
     align-items: center;
     height: 100vh;
     background: linear-gradient(300deg, #4233c5, #daec32, #0a080a);
-  background-size: 180% 180%;
-  animation: gradient-animation 10s ease infinite;
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
 }
 @keyframes gradient-animation {
-  0% {
-    background-position: 1% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 1% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
+
 .container{
     border: 2px solid #070707;
     width: 35%;
     background-color: black;
-   box-shadow: 1px 0px 9px 1px #070707;
+    box-shadow: 1px 0px 9px 1px #070707;
+    border-radius: 10px;
+    overflow: hidden;
 }
-.container-1{
-    background-color:#f2fb0a;
-     margin-bottom: 90%;
-     width: 100%;
-    padding: 0.625rem;}
 
+/* Header */
+.container-1{
+    background-color: #f2fb0a;
+    width: 100%;
+    padding: 0.625rem;
+}
+.container-1 h1{
+    font-family: 'Calistoga' ,sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 0.3rem;
+}
+.container-1 p{
+    font-family: 'Proza Libre', serif;
+    color: #515248;
+    font-size: 0.9rem;
+}
+
+/* Input Section */
 .container-2{
     position: relative;
     margin: 1rem;
     text-align: center;
 }
-h1{
-    font-family: 'Calistoga' ,sans-serif;
-    font-size: 1.5rem;
-    color: rgb(0, 0, 0);
-    margin-left: 0.625rem;
-}
-p{
-    font-family: 'Proza Libre',serif;
-    color: #515248 ;
-    margin-left:0.625rem;
-    font-size: 0.9rem;
-}
-
 input{
-      width: 90%;
-  padding: 0.75rem 3.125rem 0.75rem 0.875rem;
-  background-color: black;
-  color: #f2fb0a;
-  border-radius: 8px;
-  border: 1px solid #f2fb0a ;
-  outline: none;
-  font-size: 0.9rem;
-  margin-top: 1.563rem;
-  font-family: 'Proza Libre',serif;
+    width: 100%;
+    padding: 0.75rem 3rem 0.75rem 0.875rem;
+    background-color: black;
+    color: #f2fb0a;
+    border-radius: 8px;
+    border: 1px solid #f2fb0a;
+    outline: none;
+    font-size: 0.9rem;
+    font-family: 'Proza Libre', serif;
 }
-div a{
-    font-size: large;
-    font-weight: 1rem;
+::placeholder{
+    color: #ccc;
+}
+.container-2 a{
+    font-size: 1.2rem;
     text-decoration: none;
     color: #f2fb0a;
     position: absolute;
-    right: 40px;
-    top: 38px;
-    z-index: 1000;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
+
+/* 📱 RESPONSIVENESS */
+@media (max-width: 1024px) { /* Tablets */
+  .container {
+    width: 60%;
+  }
+  .container-1 h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) { /* Mobile phones */
+  .container {
+    width: 90%;
+  }
+  .container-1 h1 {
+    font-size: 1.1rem;
+  }
+  .container-1 p {
+    font-size: 0.8rem;
+  }
+  input {
+    font-size: 0.85rem;
+    padding: 0.75rem 2.5rem 0.75rem 0.875rem;
+  }
+  .container-2 a {
+    font-size: 1rem;
+    right: 10px;
+  }
+
+  /* 👇 Make input behave like textarea on mobile */
+  input {
+    height: 4rem;        
+    line-height: 1.5rem;
+    white-space: none; 
+    overflow-y: auto;    
+  }
+  
+}
+textarea {
+    width: 100%;
+    min-height: 2.5rem;
+    max-height: 8rem;
+    padding: 0.75rem 3rem 0.75rem 0.875rem;
+    background-color: black;
+    color: #f2fb0a;
+    border-radius: 8px;
+    border: 1px solid #f2fb0a;
+    outline: none;
+    font-size: 0.9rem;
+    font-family: 'Proza Libre', serif;
+    resize: none;         
+    overflow-y: auto;   }
 </style>
 <body>
     <div class="container">
@@ -105,7 +158,7 @@ div a{
         </div>
 
 <div class="container-2">
-    <input type="text" placeholder="Type here">
+    <textarea placeholder="Type here"></textarea>
     <a href="#"><i class="ri-send-plane-2-fill"></i></a>
     
 </div>

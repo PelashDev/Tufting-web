@@ -129,6 +129,68 @@ input[type="checkbox"] {
          transform: scale(1.1);
         transition:1s ease;
 }
+
+/* Fix typo: should be .container instead of .conatiner */
+.conatiner {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: 2px solid rgb(242, 240, 243);
+  box-shadow: 0 10 25px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #080707;
+  padding: 1rem;
+}
+
+/* Tablet (iPad) & below */
+@media (max-width: 1024px) {
+  .conatiner {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .wrapper-img img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .conatiner {
+    flex-direction: column;
+    padding: 1rem;
+    margin:5rem 3rem;
+    gap: 1rem;
+    width: 95%;
+  }
+
+  .wrapper-img img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .sign-up a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 </style>
 <body>
     <div class="conatiner">
@@ -152,8 +214,9 @@ input[type="checkbox"] {
 <input type="checkbox" />
           I agree to the <a href="#"> Platform’s Terms of Service</a> and <a href="#">Privacy Policies
           </a>
-          </div>s
+          </div>
         <div class="sign-up">
+      
         <a type="submit" href="#" >
             Sign Up
          </a>
