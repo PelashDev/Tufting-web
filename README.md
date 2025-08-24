@@ -10,6 +10,4 @@ The goal is to create clean, mobile-friendly UI sections that can be reused in w
 - 🔑 Signup form with validation-ready structure  
 - 💬 Chat/message box with styled input 
 
-## 🛠️ Tech Stack
-- HTML5  
-- CSS3 
+## 
