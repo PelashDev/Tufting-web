@@ -15,14 +15,29 @@ font-family: "Calistoga", serif;
    margin: 0%;
 padding: 0%;
 }
+
+/* Starting hidden style */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); /* move down */
+  transition: all 0.7s ease-out;
+}
+
+/* When it shows */
+.show {
+  opacity: 1;
+  transform: translateY(0); /* slide up into place */
+}
+
 html{
         scroll-behavior: smooth;
 }
  .container {
        background-color: #000000;
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
-        width: 90%;
+        padding: 0 20px;
+        /* width: 90%; */
 
 }
 
@@ -102,6 +117,7 @@ html{
    justify-content: center;
    align-items: center;
    padding-top: 150px;
+
 }
   .grid-item1{
         grid-column: 1;

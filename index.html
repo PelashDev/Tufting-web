@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="plsh.css">
+
 <title>Plsh4artz</title>
 </head>
 <body>
@@ -35,7 +36,7 @@
 </div>
        <!-- HERO SECTION -->
             <main>
-<section id="Home" class="hero-section">
+<section id="Home" class="hero-section hidden">
         <div class="grid-item1"><h1>Custom Frame Rug <br>That Hits Different</h1></div>
         
         <div class="grid-item2"><p>Welcome to a place where creativity and urban culture come togethers At Plsh4 Artz, we love turning your ideas into beautiful handcrafted artworks that brighten up any space.</p>
@@ -55,26 +56,28 @@
   playsinline 
   webkit-playsinline
   preload="auto"
-    type="video/mp4"></video>
+    type="video/mp4"
+    loading="lazy"
+    ></video>
         </div>
        
 </section>
 
         <!-- FEATURE -->
-<div id="About" class="features">
+<div id="About" class="features hidden">
     <div >
     <h2>The Art of Vibes & Vision</h2>
 <p>Every piece we craft is a striking statement handcrafted, <br> original, and designed to command attention.
      From custom   <br> rugs to Simpson themed tables and radiant wall pieces, we <br> elevate your space with extraordinary art that truly stands apart.</p>
 </div>
 <div>
-<img  class="features-img" src="svg.plsh/Rug jpg1.jpg" alt="rug-1">
+<img  class="features-img" src="svg.plsh/Rug jpg1.jpg" alt="rug-1" loading="lazy">
 </div>
 </div>
 
         <!-- BENEFIT SECTION -->
 <div id="Catalog" class="bene-section">
-    <div><img class="bene-image" src="svg.plsh/rug2.jpg" alt="rug-2"></div>
+    <div><img class="bene-image" src="svg.plsh/rug2.jpg" alt="rug-2" loading="lazy"></div>
     
     <div class="bene-flex">
         <div>
@@ -104,7 +107,7 @@
 
           <!-- CTA -->
            <section id="join">
-           <div class="cta-section">
+           <div class="cta-section hidden">
 <h2>Join our newsletter to stay up to date on features and releases.
 </h2>
 <div class="cta-item">
@@ -146,5 +149,17 @@
   <img class="chat-icon" src="svg.plsh/chatbubbles.svg" alt="chat-icon">
   </a>
 </div>
-<!-- <script src="script.js"></script> -->
+<script>
+    const hiddenElements = document.querySelectorAll('.hidden');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    hiddenElements.forEach(el => observer.observe(el));
+  </script>
+<script src="script.js"></script>
 </html>    
